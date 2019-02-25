@@ -10,7 +10,7 @@ import java.util.List;
  * @Create: 2019/02/23 12:43:28
  **/
 
-class Solution {
+class Solution17 {
 
     /**
      * @Author: Guimu
