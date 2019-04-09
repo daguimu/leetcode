@@ -11,7 +11,7 @@ import java.util.Arrays;
 public class MergeSort {
 
     public static void main(String[] args) {
-        int[] arr = {8, 4};
+        int[] arr = {8, 4, 5, 1, 3, 9, 10};
         sort(arr);
         System.out.println(Arrays.toString(arr));
     }
@@ -23,7 +23,7 @@ public class MergeSort {
 
     private static void sort(int[] arr, int left, int right, int[] temp) {
         if (left < right) {
-            int mid = (left + right) / 2;
+            int mid = (left + right) >> 1;
             sort(arr, left, mid, temp);//左边归并排序，使得左子序列有序
             sort(arr, mid + 1, right, temp);//右边归并排序，使得右子序列有序
             merge(arr, left, mid, right, temp);//将两个有序子数组合并操作
@@ -35,11 +35,7 @@ public class MergeSort {
         int j = mid + 1;//右序列指针
         int t = 0;//临时数组指针
         while (i <= mid && j <= right) {
-            if (arr[i] <= arr[j]) {
-                temp[t++] = arr[i++];
-            } else {
-                temp[t++] = arr[j++];
-            }
+            temp[t++] = arr[i] <= arr[j] ? arr[i++] : arr[j++];
         }
         while (i <= mid) {//将左边剩余元素填充进temp中
             temp[t++] = arr[i++];
