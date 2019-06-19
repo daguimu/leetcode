@@ -49,7 +49,5 @@ public class BInarySearch {
             mid = (low + high) >> 1;
         }
         return flag ? index : -1;
-
-
     }
 }

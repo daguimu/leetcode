@@ -19,6 +19,24 @@ public class LinkReverse {
         System.out.println(root);
     }
 
+    @Test
+    public void swap() {
+        Node root = create(Arrays.asList(1, 2, 3, 4));
+        root = swapNode(root);
+        System.out.println(root);
+    }
+
+    /**
+     * @Author: Guimu
+     * @Description: 单链表的相邻节点进行交换,
+     * @Param:
+     * @Return:
+     * @Date: 2019-04-23 14:56
+     */
+
+    private Node swapNode(Node cur) {
+        return null;
+    }
 
     /**
      * @Author: Guimu
