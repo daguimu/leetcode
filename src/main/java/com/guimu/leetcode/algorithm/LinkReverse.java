@@ -2,6 +2,7 @@ package com.guimu.leetcode.algorithm;
 
 import java.util.Arrays;
 import java.util.List;
+import lombok.Data;
 import org.junit.jupiter.api.Test;
 
 /**
@@ -86,6 +87,7 @@ public class LinkReverse {
 }
 
 
+@Data
 class Node {
 
     private Node next;

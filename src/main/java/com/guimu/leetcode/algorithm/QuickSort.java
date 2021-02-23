@@ -13,9 +13,8 @@ public class QuickSort {
 
     @Test
     public void test() {
-        int[] arr = {1, 6, 2, 5, 9, 4};
-//        insertSort(arr);
-        quickSort(arr, 0, 5);
+        int[] arr = {-1,2,1,-4};
+        quickSort(arr, 0, 3);
         System.out.println(Arrays.toString(arr));
 
     }
@@ -23,8 +22,9 @@ public class QuickSort {
     private void quickSort(int[] arr, int low, int high) {
         int i = low;
         int j = high;
+        int pov = arr[low];
         while (i < j) {
-            int pov = arr[low];
+
 
             while (i < j && arr[j] >= pov) {
                 j--;
