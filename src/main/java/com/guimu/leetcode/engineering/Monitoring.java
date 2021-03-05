@@ -28,6 +28,7 @@ public class Monitoring {
         File file = new File(path);
         if (!file.exists() || !path.toLowerCase().endsWith(FILE_SUFFIX)) {
             throw new RuntimeException("文件不存在");
+
         }
         AudioInputStream stream;
         //使用 mp3spi 解码 mp3 音频文件
